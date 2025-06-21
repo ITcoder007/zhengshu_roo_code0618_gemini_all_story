@@ -18,7 +18,7 @@ public class CertificateService extends ServiceImpl<CertificateRepository, Certi
         return this.list(queryWrapper);
     }
 
-    public boolean updateCertificateStatus(String id, String status) {
+    public boolean updateCertificateStatus(Long id, String status) {
         Certificate certificate = new Certificate();
         certificate.setId(id);
         certificate.setStatus(status);

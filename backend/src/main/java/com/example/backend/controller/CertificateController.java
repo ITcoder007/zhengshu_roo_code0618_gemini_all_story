@@ -31,7 +31,7 @@ public class CertificateController {
     @Operation(summary = "根据ID获取证书", description = "根据证书ID获取单个证书详情")
     public Certificate getCertificateById(
             @Parameter(description = "证书ID", required = true)
-            @PathVariable String id) {
+            @PathVariable Long id) {
         return certificateService.getById(id);
     }
 
@@ -47,7 +47,7 @@ public class CertificateController {
     @Operation(summary = "更新证书", description = "根据ID更新证书信息")
     public boolean updateCertificate(
             @Parameter(description = "证书ID", required = true)
-            @PathVariable String id,
+            @PathVariable Long id,
             @Parameter(description = "更新后的证书信息", required = true)
             @RequestBody Certificate certificate) {
         certificate.setId(id);
