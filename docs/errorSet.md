@@ -1,4 +1,5 @@
 # 错误记录与解决方案
+prompt： 罗列本次 chat 出现的所有出现的错误和失误，并在每条错误下面写上解决方案。目的是防止下次犯相同的错误。位置： docs/errorSet.md
 
 ## 1. Swagger UI显示默认页面而非API文档
 **错误现象**：访问/swagger-ui.html显示默认页面而非控制器API文档  
@@ -93,3 +94,32 @@ mybatis-plus:
 **预防措施**：
 - 在任务拆分时明确验证点
 - 使用自动化测试保障基础功能
+
+## 6. ID类型不匹配问题
+**错误现象**：实体类(Long)与Controller/Service(String)参数类型不一致
+**原因分析**：开发过程中类型定义不统一
+
+**解决方案**：
+1. 统一修改为Long类型：
+```java
+// 实体类
+public class Certificate {
+    private Long id;  // 保持Long类型
+}
+
+// Controller
+@GetMapping("/{id}")
+public ResponseEntity<Certificate> getById(@PathVariable Long id) {
+    // ...
+}
+
+// Service
+public Certificate getById(Long id) {
+    // ...
+}
+```
+
+**预防措施**：
+- 项目初期明确ID类型规范
+- 在接口文档中标注参数类型
+- 代码审查时检查类型一致性
