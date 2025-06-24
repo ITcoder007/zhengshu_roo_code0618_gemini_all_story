@@ -20,10 +20,10 @@
 
 ## 任务 / Subtasks
 
-- [x] 1. 初始化Git仓库并设置Monorepo结构。
-- [x] 2. 使用Spring Initializr创建后端Maven项目模块 (`/backend`)，集成MybatisPlus 3.5.x。
-- [x] 3. 使用Vite创建前端Vue 3.x项目模块 (`/frontend`)。
-- [x] 4. 创建根`README.md`并添加项目启动说明。
+- [ ] 1. 初始化Git仓库并设置Monorepo结构。
+- [ ] 2. 使用Spring Initializr创建后端Maven项目模块 (`/backend`)，集成MybatisPlus 3.5.x。
+- [ ] 3. 使用Vite创建前端Vue 3.x项目模块 (`/frontend`)。
+- [ ] 4. 创建根`README.md`并添加项目启动说明。
 
 ## Dev Notes
 
@@ -64,11 +64,11 @@
 
 ## 任务 / Subtasks
 
-- [x] 1. (后端) 在`backend/pom.xml`中配置Jacoco插件，设定80%的覆盖率检查规则，并配置报告生成。
-- [x] 2. (前端) 在`frontend`目录中安装Jest及相关依赖，配置测试环境。
-- [x] 3. (前端) 创建`frontend/jest.config.js`并配置好覆盖率报告和80%的阈值检查。
-- [x] 4. (CI) 在项目根目录创建`.github/workflows/ci.yml`文件，包含代码质量检查。
-- [x] 5. (CI) 在`ci.yml`中编写脚本，依次执行后端 (`mvn clean verify`) 和前端 (`npm test`) 的测试命令，并收集覆盖率报告。
+- [ ] 1. (后端) 在`backend/pom.xml`中配置Jacoco插件，设定80%的覆盖率检查规则，并配置报告生成。
+- [ ] 2. (前端) 在`frontend`目录中安装Jest及相关依赖，配置测试环境。
+- [ ] 3. (前端) 创建`frontend/jest.config.js`并配置好覆盖率报告和80%的阈值检查。
+- [ ] 4. (CI) 在项目根目录创建`.github/workflows/ci.yml`文件，包含代码质量检查。
+- [ ] 5. (CI) 在`ci.yml`中编写脚本，依次执行后端 (`mvn clean verify`) 和前端 (`npm test`) 的测试命令，并收集覆盖率报告。
 
 ## Dev Notes
 
@@ -111,10 +111,10 @@
 
 ## 任务 / Subtasks
 
-- [x] 1. 在`backend/src/main/resources/application.properties`中添加MySQL数据源配置，包含时区设置(serverTimezone=Asia/Shanghai)。
-- [x] 2. 创建`Certificate.java`实体类，包含所有必需的字段和JPA/MybatisPlus注解。
-- [x] 3. 创建一个SQL初始化脚本（如`schema.sql`），定义`certificates`表结构。
-- [x] 4. 创建`CertificateRepository.java`接口，用于数据访问。
+- [ ] 1. 在`backend/src/main/resources/application.properties`中添加MySQL数据源配置，包含时区设置(serverTimezone=Asia/Shanghai)。
+- [ ] 2. 创建`Certificate.java`实体类，包含所有必需的字段和JPA/MybatisPlus注解。
+- [ ] 3. 创建一个SQL初始化脚本（如`schema.sql`），定义`certificates`表结构。
+- [ ] 4. 创建`CertificateRepository.java`接口，用于数据访问。
 
 ## Dev Notes
 
