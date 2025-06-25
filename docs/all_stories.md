@@ -1,8 +1,6 @@
-
-
 ### **故事文件: story-1.1.md**
 
-## Status: Approved
+## Status: Done
 
 ## 故事
 
@@ -20,10 +18,10 @@
 
 ## 任务 / Subtasks
 
-- [ ] 1. 初始化Git仓库并设置Monorepo结构。
-- [ ] 2. 使用Spring Initializr创建后端Maven项目模块 (`/backend`)，集成MybatisPlus 3.5.x。
-- [ ] 3. 使用Vite创建前端Vue 3.x项目模块 (`/frontend`)。
-- [ ] 4. 创建根`README.md`并添加项目启动说明。
+- [x] 1. 初始化Git仓库并设置Monorepo结构。
+- [x] 2. 使用Spring Initializr创建后端Maven项目模块 (`/backend`)，集成MybatisPlus 3.5.x。
+- [x] 3. 使用Vite创建前端Vue 3.x项目模块 (`/frontend`)。
+- [x] 4. 创建根`README.md`并添加项目启动说明。
 
 ## Dev Notes
 使用以下 MySQL 链接：
@@ -31,6 +29,12 @@
    url: jdbc:mysql://localhost:3306/cert_claude_code0624_roo?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
    username: root
    password: root
+
+- **数据库配置验证**:
+  1. 确保MySQL 8.0服务已启动
+  2. 数据库名称为cert_claude_code0624_roo
+  3. 时区设置为Asia/Shanghai
+  4. 字符编码为UTF-8
 
 
 - **架构参考**: 遵循架构文档中定义的Monorepo源代码结构。
