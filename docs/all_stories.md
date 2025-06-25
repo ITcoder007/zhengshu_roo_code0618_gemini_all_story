@@ -75,8 +75,8 @@
 ## 任务 / Subtasks
 
 - [x] 1. (后端) 在`backend/pom.xml`中配置Jacoco插件，设定80%的覆盖率检查规则，并配置报告生成。
-- [ ] 2. (前端) 在`frontend`目录中安装Jest及相关依赖，配置测试环境。
-- [ ] 3. (前端) 创建`frontend/jest.config.js`并配置好覆盖率报告和80%的阈值检查。
+- [x] 2. (前端) 在`frontend`目录中安装Jest及相关依赖，配置测试环境。
+- [x] 3. (前端) 创建`frontend/jest.config.js`并配置好覆盖率报告和80%的阈值检查。
 - [x] 4. (CI) 在项目根目录创建`.github/workflows/ci.yml`文件，包含代码质量检查。
 - [x] 5. (CI) 在`ci.yml`中编写脚本，依次执行后端 (`mvn clean verify`) 和前端 (`npm test`) 的测试命令，并收集覆盖率报告。
 
