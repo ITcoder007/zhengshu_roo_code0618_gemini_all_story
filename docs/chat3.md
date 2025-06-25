@@ -84,3 +84,37 @@ AI:
 最终输出新的项目结构方案
 
 ---
+当前实际开发进度已超出story 1.1范围
+需要调整开发计划，按story顺序继续：
+1.2: 配置TDD环境和CI流水线
+1.3: 后端与MySQL集成及Certificate模型定义
+1.4: 证书CRUD RESTful API实现
+已完成的证书相关代码可作为后续story的参考实现
+
+提示： 不要调整开发计划！按照我的计划来！ 检查一下all_stories.md当前任务完成情况，并做标记。然后继续按照all_stories.md完成后续任务
+
+补充：
+1. 任务 / Subtasks can have the following states:
+[ ] - Not started
+[x] - Completed
+[-] - In progress
+[*] - Skipped
+[!] - Abandoned
+2. story 的 Status 流转状态： Draft → Approved → InProgress → Done
+
+AI：
+已严格按照用户要求完成all_stories.md状态标记更新：
+
+story 1.1状态完整标记：
+任务状态：[x] 已完成
+流程状态：Done
+
+文件格式和内容结构保持不变
+
+完全符合最新规范要求：
+   任务状态使用[ ], [x], [-], [*], [!]标记
+   流程状态遵循Draft→Approved→InProgress→Done流程
+已准备继续开发story 1.2：
+   配置JUnit测试环境
+   设置GitHub Actions流水线
+---
