@@ -186,6 +186,49 @@
 
 ---
 
+### **故事文件: story-2.0.md**
+
+## Status: Approved
+
+## 故事
+
+- **作为一个**用户，
+- **我想要**直接在看板页面上发起对证书的增、改、删操作，
+- **以便于**我的管理工作流程更加高效和连贯。
+
+## 任务 / Subtasks
+
+- [ ] 1. 创建一个`CertificateForm.vue`组件，包含域名和过期日的输入表单。
+- [ ] 2. 在`Dashboard.vue`中添加“新增证书”按钮，点击后以模态框形式显示`CertificateForm`。
+- [ ] 3. 为证书列表的每一行添加“编辑”和“删除”按钮。
+- [ ] 4. 实现点击“编辑”按钮时，打开`CertificateForm`模态框并填充数据。
+- [ ] 5. 实现点击“删除”按钮时，弹出二次确认对话框。
+- [ ] 6. 在`CertificateForm`中实现提交逻辑，根据是新增还是编辑，调用对应的POST或PUT API。
+- [ ] 7. 实现删除逻辑，调用DELETE API。
+- [ ] 8. 在任何操作（增/改/删）成功后，刷新看板的证书列表。
+
+## Dev Notes
+
+- **组件复用**:`CertificateForm.vue`应该被设计为可同时用于新增和编辑两种场景。
+- **用户反馈**: 所有操作成功或失败后，都应有明确的用户提示（如Toast通知）。
+
+### 测试
+
+- 为`CertificateForm.vue`编写组件测试，验证表单提交时是否会触发带有正确数据的API调用事件。
+- 为`Dashboard.vue`编写组件测试，验证点击增/改/删按钮后是否会触发正确的行为（如打开模态框、调用删除API）。
+
+## Dev Agent Record
+
+### Agent Model Used:
+
+### Debug Log References:
+
+### Completion Notes List:
+
+### Change Log:
+
+---
+
 ### **故事文件: story-2.1.md**
 
 ## Status: Approved
@@ -305,45 +348,4 @@
 
 ### Change Log:
 
----
 
-### **故事文件: story-2.4.md**
-
-## Status: Approved
-
-## 故事
-
-- **作为一个**用户，
-- **我想要**直接在看板页面上发起对证书的增、改、删操作，
-- **以便于**我的管理工作流程更加高效和连贯。
-
-## 任务 / Subtasks
-
-- [ ] 1. 创建一个`CertificateForm.vue`组件，包含域名和过期日的输入表单。
-- [ ] 2. 在`Dashboard.vue`中添加“新增证书”按钮，点击后以模态框形式显示`CertificateForm`。
-- [ ] 3. 为证书列表的每一行添加“编辑”和“删除”按钮。
-- [ ] 4. 实现点击“编辑”按钮时，打开`CertificateForm`模态框并填充数据。
-- [ ] 5. 实现点击“删除”按钮时，弹出二次确认对话框。
-- [ ] 6. 在`CertificateForm`中实现提交逻辑，根据是新增还是编辑，调用对应的POST或PUT API。
-- [ ] 7. 实现删除逻辑，调用DELETE API。
-- [ ] 8. 在任何操作（增/改/删）成功后，刷新看板的证书列表。
-
-## Dev Notes
-
-- **组件复用**:`CertificateForm.vue`应该被设计为可同时用于新增和编辑两种场景。
-- **用户反馈**: 所有操作成功或失败后，都应有明确的用户提示（如Toast通知）。
-
-### 测试
-
-- 为`CertificateForm.vue`编写组件测试，验证表单提交时是否会触发带有正确数据的API调用事件。
-- 为`Dashboard.vue`编写组件测试，验证点击增/改/删按钮后是否会触发正确的行为（如打开模态框、调用删除API）。
-
-## Dev Agent Record
-
-### Agent Model Used:
-
-### Debug Log References:
-
-### Completion Notes List:
-
-### Change Log:
