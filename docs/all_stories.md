@@ -2,7 +2,7 @@
 
 ### **故事文件: story-1.1.md**
 
-## Status: Draft
+## Status: Approved
 
 ## 故事
 
@@ -47,7 +47,7 @@
 
 ### **故事文件: story-1.2.md**
 
-## Status: Draft
+## Status: Approved
 
 ## 故事
 
@@ -94,7 +94,7 @@
 
 ### **故事文件: story-1.3.md**
 
-## Status: Draft
+## Status: Approved
 
 ## 故事
 
@@ -140,7 +140,7 @@
 
 ### **故事文件: story-1.4.md**
 
-## Status: Draft
+## Status: Approved
 
 ## 故事
 
@@ -188,7 +188,7 @@
 
 ### **故事文件: story-2.1.md**
 
-## Status: Draft
+## Status: Approved
 
 ## 故事
 
@@ -232,7 +232,7 @@
 
 ### **故事文件: story-2.2.md**
 
-## Status: Draft
+## Status: Approved
 
 ## 故事
 
@@ -271,7 +271,7 @@
 
 ### **故事文件: story-2.3.md**
 
-## Status: Draft
+## Status: Approved
 
 ## 故事
 
@@ -309,7 +309,7 @@
 
 ### **故事文件: story-2.4.md**
 
-## Status: Draft
+## Status: Approved
 
 ## 故事
 
