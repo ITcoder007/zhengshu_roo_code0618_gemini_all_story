@@ -41,9 +41,46 @@ AI：
    password: root
 3.明确状态管理方案选择：Pinia
 
+请先仔细阅读 docs/ 下的  prd 和 architecture ，然后
 帮我按照 all_stories.md 完成开发任务，使用 tdd 确保质量，架构为 ddd，完成任务后勾掉对应任务。
 all_stories.md 的 story 顺序我已经安排好了，请严格按照这个顺序依次开发
 
 严格按照标记顺序开发
 在1.4和2.0实施时加强测试覆盖
 后续迭代补充日志功能
+
+AI：
+需要切换到代码模式进行实际开发
+开发策略：
+   严格遵循TDD流程
+   按故事顺序逐个实现
+   使用DDD架构
+   完善测试覆盖
+特别注意：
+   审计字段默认值
+   MySQL时区配置
+   Pinia状态管理
+
+---
+补充：
+story 1.1 补充了前后端代码的目录：
+
+ 仓库中包含一个后端模块（目录为backend）
+ 仓库中包含一个前端模块（目录为frontend）
+
+-- 
+补充：
+请先仔细阅读 docs/ 下的  prd 和 architecture ，然后深入了解当前项目开发进度。
+深入理解all_stories.md开发过程，然后帮我按照 all_stories.md 完成开发任务，完成任务后勾掉对应任务。
+all_stories.md 的 story 顺序我已经安排好了，请严格按照这个顺序依次开发；
+使用 tdd 确保质量，架构为 ddd，技术栈严格按照architecture的技术栈
+
+AI:
+首先需要阅读两个关键文档：docs/prd.md和docs/architecture.md，以了解项目需求和架构要求
+当前环境显示已有部分后端结构(backend目录)和前端Vue项目(frontend目录)
+需要根据DDD架构重新规划Java后端项目结构
+前端Vue项目需要保留，可能只需要微调
+需要确保新结构符合architecture.md中的技术栈要求
+最终输出新的项目结构方案
+
+---

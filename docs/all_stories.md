@@ -13,8 +13,8 @@
 ## 验收标准 (ACs)
 
 1. 一个空的 Monorepo 仓库被初始化。
-2. 仓库中包含一个后端模块，使用**Maven**和 Spring Boot 2.7.x 进行配置。
-3. 仓库中包含一个前端模块，使用 Vue 3.x 进行配置。
+2. 仓库中包含一个后端模块（目录为backend），使用**Maven**和 Spring Boot 2.7.x 进行配置。
+3. 仓库中包含一个前端模块（目录为frontend），使用 Vue 3.x 进行配置。
 4. 前后端应用都可以在本地独立启动。
 5. 根目录包含一个基础的`README.md`文件。
 
@@ -26,6 +26,12 @@
 - [ ] 4. 创建根`README.md`并添加项目启动说明。
 
 ## Dev Notes
+使用以下 MySQL 链接：
+（serverTimezone=Asia/Shanghai）：
+   url: jdbc:mysql://localhost:3306/cert_claude_code0624_roo?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+   username: root
+   password: root
+
 
 - **架构参考**: 遵循架构文档中定义的Monorepo源代码结构。
 
