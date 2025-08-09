@@ -16,3 +16,31 @@ The Certificate Lifecycle Management System is a web-based application designed 
 - **Certificate CRUD:** Full support for creating, reading, updating, and deleting certificate metadata.
 - **Audit Trails:** Automatically track changes with fields for `creator`, `createdAt`, `modifier`, and `modifiedAt`.
 - **Asset Dashboard:** A user-friendly interface to display a list of all certificates, their domain, issuer, validity, and current status.
+
+## 2. Backend Architecture
+
+The backend is a monolithic application built with Java and the Spring Boot framework. It follows the principles of Domain-Driven Design (DDD) to ensure a clean and maintainable codebase.
+
+### 2.1 Technology Stack
+
+| Category          | Technology        | Version      | Purpose                                      |
+|-------------------|-------------------|--------------|----------------------------------------------|
+| **Language**      | Java              | 1.8          | Core backend business logic                  |
+| **Framework**     | Spring Boot       | 2.7.18       | Rapid application development                |
+| **Build Tool**    | Maven             |              | Dependency management and project build      |
+| **Data Access**   | MyBatis-Plus      | 3.5.6        | Simplified database CRUD operations          |
+| **Database**      | MySQL             | 8.0.33       | Data persistence for certificate information |
+
+### 2.2 Project Structure
+
+The backend code is organized into four main packages, reflecting the layers of Domain-Driven Design:
+
+```
+/backend/src/main/java/com/example/certificate/
+|-- /domain         # Domain Layer: Contains the core business logic and entities, such as the Certificate model.
+|-- /application    # Application Layer: Orchestrates domain objects to perform application-specific tasks.
+|-- /infrastructure # Infrastructure Layer: Handles technical concerns like database access and external services.
+|-- /interfaces     # Interfaces Layer: Exposes the application's functionality via RESTful APIs.
+```
+
+### 2.3 Main Components
