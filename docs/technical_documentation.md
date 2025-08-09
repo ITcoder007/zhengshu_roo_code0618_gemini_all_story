@@ -163,5 +163,49 @@ CREATE TABLE `certificates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='证书元数据表';
 ```
 
+## 6. Getting Started
+
+This section provides instructions on how to set up and run the project locally for development and testing.
+
+### 6.1 Prerequisites
+
+- **Java Development Kit (JDK):** Version 8 or higher
+- **Maven:** Version 3.6 or higher
+- **Node.js:** Version 18 or higher
+- **npm:** Version 9 or higher
+- **MySQL:** Version 8.0 or higher
+
+### 6.2 Backend Setup
+
+1. **Navigate to the backend directory:**
+   ```bash
+   cd backend
+   ```
+2. **Install dependencies and build the project:**
+   ```bash
+   mvn clean install
+   ```
+3. **Run the Spring Boot application:**
+   ```bash
+   mvn spring-boot:run
+   ```
+
+### 6.3 Frontend Setup
+
+1. **Navigate to the frontend directory:**
+   ```bash
+   cd frontend
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+```
+
+
 
 
