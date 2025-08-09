@@ -143,4 +143,25 @@ The backend provides a RESTful API for managing certificates. All endpoints are 
 - **Response (200 OK):** A success message.
 - **Response (404 Not Found):** If the certificate with the specified ID does not exist.
 
+## 5. Database Schema
+
+The application uses a MySQL database to store certificate information. The schema is defined as follows:
+
+### 5.1 `certificates` Table
+
+```sql
+CREATE TABLE `certificates` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `domain` VARCHAR(255) NOT NULL COMMENT '证书域名',
+  `expiry_date` DATE NOT NULL COMMENT '过期日期',
+  `creator` VARCHAR(255) NOT NULL COMMENT '创建人',
+  `created_at` DATETIME NOT NULL COMMENT '创建时间',
+  `modifier` VARCHAR(255) NOT NULL COMMENT '修改人',
+  `modified_at` DATETIME NOT NULL COMMENT '修改时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_domain` (`domain`) COMMENT '域名唯一约束'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='证书元数据表';
+```
+
+
 
