@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import javax.persistence.Column;
 
 @Data
 @TableName("certificates")
@@ -12,6 +13,7 @@ public class Certificate {
     @TableId(type = IdType.AUTO)
     private Long id;
     
+    @Column(unique = true)
     private String domain;
     
     private LocalDate expiryDate;
