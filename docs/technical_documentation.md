@@ -83,3 +83,64 @@ The frontend code is organized into the following directories:
 - **api.ts:** The service module that configures the Axios client and defines functions for making API calls to the backend.
 - **router/index.ts:** The routing configuration file that maps URL paths to their corresponding view components.
 
+## 4. API Endpoints
+
+The backend provides a RESTful API for managing certificates. All endpoints are prefixed with `/certificates`.
+
+### 4.1 Create Certificate
+
+- **Endpoint:** `POST /certificates`
+- **Description:** Adds a new certificate to the system.
+- **Request Body:**
+  ```json
+  {
+    "domain": "example.com",
+    "expiryDate": "2025-12-31"
+  }
+  ```
+- **Response (200 OK):** The newly created certificate object.
+
+### 4.2 List Certificates
+
+- **Endpoint:** `GET /certificates`
+- **Description:** Retrieves a paginated list of all certificates.
+- **Query Parameters:**
+  - `page` (optional, default: 1): The page number to retrieve.
+  - `size` (optional, default: 10): The number of certificates per page.
+- **Response (200 OK):** A paginated list of certificate objects.
+
+### 4.3 Get Certificate by ID
+
+- **Endpoint:** `GET /certificates/{id}`
+- **Description:** Retrieves a single certificate by its unique ID.
+- **Path Parameter:**
+  - `id`: The ID of the certificate to retrieve.
+- **Response (200 OK):** The requested certificate object.
+- **Response (404 Not Found):** If the certificate with the specified ID does not exist.
+
+### 4.4 Update Certificate
+
+- **Endpoint:** `PUT /certificates/{id}`
+- **Description:** Updates the details of an existing certificate.
+- **Path Parameter:**
+  - `id`: The ID of the certificate to update.
+- **Request Body:**
+  ```json
+  {
+    "domain": "updated-example.com",
+    "expiryDate": "2026-01-15"
+  }
+  ```
+- **Response (200 OK):** The updated certificate object.
+- **Response (404 Not Found):** If the certificate with the specified ID does not exist.
+
+### 4.5 Delete Certificate
+
+- **Endpoint:** `DELETE /certificates/{id}`
+- **Description:** Deletes a certificate from the system.
+- **Path Parameter:**
+  - `id`: The ID of the certificate to delete.
+- **Response (200 OK):** A success message.
+- **Response (404 Not Found):** If the certificate with the specified ID does not exist.
+
+
