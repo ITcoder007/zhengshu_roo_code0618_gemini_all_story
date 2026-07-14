@@ -6,17 +6,17 @@
       <table>
         <thead>
           <tr>
-            <th>证书名称</th>
-            <th>颁发机构</th>
-            <th>有效期</th>
+            <th>域名</th>
+            <th>过期时间</th>
+            <th>创建者</th>
             <th>操作</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="cert in certificates" :key="cert.id">
-            <td>{{ cert.name }}</td>
-            <td>{{ cert.issuer }}</td>
-            <td>{{ cert.validity }}</td>
+            <td>{{ cert.domain }}</td>
+            <td>{{ cert.expiryDate }}</td>
+            <td>{{ cert.creator }}</td>
             <td>
               <button @click="editCertificate(cert.id)">编辑</button>
               <button @click="deleteCertificate(cert.id)">删除</button>
@@ -37,10 +37,13 @@ import { defineComponent, ref } from 'vue'
 import { getCertificates } from '@/services/api'
 
 interface Certificate {
-  id: string
-  name: string
-  issuer: string
-  validity: string
+  id: number
+  domain: string
+  expiryDate: string
+  creator: string
+  createdAt: string
+  modifier: string
+  modifiedAt: string
 }
 
 export default defineComponent({
@@ -52,7 +55,8 @@ export default defineComponent({
     const fetchCertificates = async () => {
       try {
         const response = await getCertificates()
-        certificates.value = response.data
+        const result = response.data as { code: number; message: string; data: { records: Certificate[] } }
+        certificates.value = result.data?.records ?? []
       } catch (error) {
         console.error('获取证书列表失败:', error)
       }

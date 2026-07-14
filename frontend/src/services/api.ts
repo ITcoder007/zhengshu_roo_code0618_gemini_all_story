@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api', // 根据实际后端API地址修改
+  baseURL: '/api', // 根据实际后端API地址修改
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json'

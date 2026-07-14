@@ -3,10 +3,14 @@ import CertificateList from '../views/CertificateList.vue'
 
 const routes = [
   {
+    path: '/',
+    redirect: '/certificates',
+  },
+  {
     path: '/certificates',
     name: 'Certificates',
-    component: CertificateList
-  }
+    component: CertificateList,
+  },
 ]
 
 const router = createRouter({
